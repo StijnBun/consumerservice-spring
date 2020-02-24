@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "producerservice",  url = "localhost:8080/producerservice")
 public interface ProducerClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/acceleratorobject")
+    @RequestMapping(method = RequestMethod.GET, value = "/acceleratorobject", consumes = {"application/JSON"})
     AcceleratorObject getAcceleratorObject();
 
 }
